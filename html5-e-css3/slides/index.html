@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<!--
+  Google HTML5 slide template
+
+  Authors: Luke Mahé (code)
+           Marcin Wichary (code and design)
+           Dominic Mazzoni (browser compatibility)
+           Charles Chen (ChromeVox support)
+
+  URL: http://code.google.com/p/html5slides/
+-->
+<html>
+  <head>
+    <title>html5 e css / eati, Frederico Westphalen - RS</title>
+    <meta charset='utf-8'>
+    <script src='http://html5slides.googlecode.com/svn/trunk/slides.js'></script>
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|Droid+Sans" type="text/css" media="screen" title="no title" charset="utf-8">
+   <style>
+	/* Your individual styles here, or just use inline styles if that’s
+       what you want. */
+	body{
+		background-color:#ccc !important;
+		background: -moz-radial-gradient(#999, #000) !important;
+		background: -webkit-radial-gradient(#999, #000) !important;
+	}
+	.slides.template-default > article:not(.nobackground):not(.biglogo) {
+	  background: url("logo.png")  no-repeat scroll 780px 620px white !important;  
+	}
+	.slides > article{
+		color:#333 !important;
+	}
+	.source:before{
+		content: "fonte: ";
+		border-shadow:#ccc;
+	}
+	.source{
+		text-shadow: 0 0 7px #000000;
+	}
+	article.fill h3{
+		background:none repeat scroll 0 0 rgba(0, 0, 0, 1) !important;
+		color:#fff !important;
+		-moz-box-shadow: 0 0 5px #888;
+		-webkit-box-shadow: 0 0 5px #888;
+		box-shadow: 0 0 5px #888;
+	}
+	.slides > article.iframe-full{
+		padding-top:0;
+	}
+	.slides > article.iframe-full iframe{
+		margin-top:45px;
+	}
+	.slides > article.iframe-full h3{
+		padding: 0.3em 20px !important;
+	}
+	.slides > article.code-example table td{
+		border-width:0 !important;
+	}
+	.slides > article.code-example pre{
+		margin-top:0 !important;
+	}
+	.code-example .zebra{
+		display:block;
+		background: #fff;
+		border: 1px solid #d7d7d7;
+		width:150px;
+		text-align:center;
+	}
+	.code-example .zebra:nth-child(odd) {
+		background: #E3E3E3;
+	}
+	.code-example .zebra:first-child{
+	    border:2px solid #f00;
+	}
+	.code-example .square{
+		width:200px;
+		height:200px;
+		border:1px solid #ccc;
+	}
+	.code-example .box-opacity{
+background-color: rgba(255, 0, 0, 0.35);
+	}
+	.code-example .box-opacity{
+background-color: rgba(255, 0, 0, 0.35);
+	}
+	
+	.code-example .box-shadow{
+		box-shadow: 0px 0px 10px #ccc;
+	}
+	.code-example .border-radius{
+		border-radius: 25px;
+	}
+	.code-example .example{
+		width:150px;
+	}
+	/*especifico*/
+	.quem-sou ul {
+	    background-color: #000000;
+	    margin-left: -60px;
+	    opacity: 0.7;
+		padding:30px 20px;
+	}
+	.quem-sou li {
+	    background-color: #000000;
+	    list-style: none outside none;
+	    margin: 0 0 0.5em;
+	    opacity: 1;
+	    padding: 0 45px 0 60px;
+	}
+	.quem-sou li:before {
+	    margin-left: 0;
+	    position: absolute;
+	    width: 0.75em;
+	}
+	.qual-doctype li:before{
+		content: '' !important;
+	}
+	.qual-doctype ul{
+		position:relative;
+	}
+	.qual-doctype .xis{
+	    color: #FF0000;
+	    font-size: 556px;
+	    font-weight: bold;
+	    left: 25%;
+	    position: absolute;
+	    top: 163px;
+	}
+	.font-face-teste {
+	font-family: "Droid Sans Mono";
+	}
+  </style>
+  <head>
+  <body style='display: none'>
+
+    <section class='slides layout-regular template-default'>
+      
+      <!-- Your slides (<article>s) go here. Delete or comment out the
+           slides below. -->
+        
+      <!--<article class='biglogo'></article>-->
+
+      <article>
+        <h1>
+          HTML5 e CSS3
+        </h1>
+        <p>
+          Davidson Fellipe | @davidsonfellipe
+          <br>
+          Aug 26, 2011
+        </p>
+      </article>
+
+			<!-- quem sou? -->
+			<article class='fill quem-sou'>
+			  <h3>
+			    Quem sou?
+			  </h3>
+			  <p>
+			    <img src='recife_pb.jpg'>
+					<ul>
+			        <li class="white">
+			          developer na globo.com / globoesporte
+			        </li>
+			        <li class="white">
+			          engenheiro da computação e técnico em eletrônica
+					</li>
+					<li class="white">
+			          entusiasta de desenvolvimento client-side desde 2002
+					</li>
+			        <li class="white">
+			          html, css, javascript, software engineering, design and development of web-based products, seo, performance e web semantics.
+					</li>
+			      </ul>
+			  </p>
+			  <div class='source white'>
+			    http://www.flickr.com/photos/julianamalta/
+			  </div>
+			</article>
+				  <!-- assuntos relacionados -->
+			      <article>
+			        <h3>assuntos abordados</h3>
+			        <ul>
+			          <li class="black">html 5</li>
+			          <li class="black">css 3</li>
+			          <li class="black">javascript</li>
+			          <li class="black">cross-browser</li>
+			          <li class="black">ferramentas</li>
+			        </ul>
+			      </article>
+
+					<article class='fill'>
+					  <h3>Tim Berners-Lee</h3>
+					  <p>
+					    <img src='tim.jpg'>
+							<ul>
+					        <li class="white">
+					        criador da web
+					        </li>
+					        <li class="white">
+							fundou w3c
+							</li>
+					      </ul>
+					  </p>
+					</article>
+
+				  <!-- assuntos relacionados -->
+			      <article>
+			        <h3>web</h3>
+			        <ul>
+			          <li>Um esquema de nomes para localização de fontes de informação na Web, esse esquema chama-se URI.</li>
+			          <li>Um Protocolo de acesso para acessar estas fontes, hoje o HTTP.</li>
+			          <li>Uma linguagem de Hypertexto, para a fácil navegação entre as fontes de informação: o HTML.</li>
+			        </ul>
+					<div class='source white'>
+					http://www.w3c.br/cursos/html5/conteudo/capitulo1.html
+					</div>
+			      </article>
+
+				  <!-- html -->
+			      <article>
+			        <h3>html</h3>
+			        <ul>
+			          <li>Hypertext Markup Language</li>
+			          <li>texto, imagem, vídeo, áudio e etc</li>
+			          <li>baseado no conceito de Hipertexto. Hipertexto são conjuntos de elementos – ou nós – ligados por conexões.</li>
+			        </ul>
+			      </article>
+
+				  <article class='fill iframe-full'>
+			        <h3>
+			          suporte html5 e css3
+			        </h3>
+			        <iframe src='http://html5readiness.com/'></iframe>
+			      </article>
+
+						<!-- estrutura basica -->
+						<article>
+							<h3>algumas das tags que iremos ver...</h3>
+							<section>
+								<pre>
+&lt;article&gt; 
+&lt;aside&gt; 	
+&lt;audio&gt; 	
+&lt;canvas&gt; 	
+&lt;datalist&gt;
+&lt;details&gt; 
+&lt;embed&gt; 	
+&lt;figcaption&gt; 
+&lt;figure&gt; 	
+&lt;footer&gt; 	
+&lt;header&gt; 	
+&lt;hgroup&gt; 	
+&lt;nav&gt; 	
+&lt;progress&gt;
+&lt;section&gt; 
+&lt;time&gt; 	
+&lt;video&gt;</pre>
+							</section>
+					    </article>
+
+				      <article class="qual-doctype">
+				        <h3>
+				          você lembra seu DOCTYPE do xhtml?
+				        </h3>
+				        <section>
+							<ul class="build">
+								<li>
+										        <pre>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+									"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</pre>
+												<pre>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+									"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</pre>
+												<pre>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" 
+									"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd"&gt;</pre>
+												<pre>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
+									"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;</pre>
+								</li>
+								<li>
+									<div class="xis">X</div>
+								</li>
+							</ul>
+						</section>
+				      </article>
+				
+				      <article class="qual-doctype">
+				        <h3>
+				          DOCTYPE do html5 :)
+				        </h3>
+				        <section>
+							<ul>
+								<li>
+										        <pre>&lt;!DOCTYPE html"&gt;</pre>
+								</li>
+							</ul>
+						</section>
+				      </article>
+				
+
+					<!-- simplificacao do charset -->
+					<article>
+						<h3>simplificação do charset</h3>
+						<section>
+							<h4>xhtml</h4>
+							<pre>&lt;meta http-equiv="content-type" content="text/html; charset=utf-8"&gt;</pre>
+							<h4>html</h4>
+							<pre>&lt;meta charset="utf-8"&gt;</pre>
+						</section>
+				    </article>
+
+					<!-- estrutura basica -->
+					<article class="smaller">
+						<h3>estrutura básica do html5</h3>
+						<section>
+							<pre>
+&lt;!DOCTYPE HTML&gt;
+&lt;html lang="pt-br"&gt;
+	&lt;head&gt;
+	    &lt;meta charset="utf-8"&gt;
+	    &lt;link rel="stylesheet" type="text/css" href="estilo.css"&gt;
+	    &lt;title&gt;titulo da pagina&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+	    &lt;header&gt;  
+	        &lt;!-- cabeçalho --&gt;  
+	    &lt;/header&gt;  
+	    &lt;nav&gt;  
+	        &lt;!-- navegação principal --&gt;  
+	    &lt;/nav&gt;    
+	    &lt;section&gt;  
+	        &lt;!-- conteúdo principal --&gt;  
+	    &lt;/section&gt;  
+	    &lt;aside&gt;  
+	        &lt;!-- sidebar --&gt;  
+	    &lt;/aside&gt;  
+	    &lt;footer&gt;  
+	        &lt;!-- rodapé --&gt;  
+	    &lt;/footer&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</pre>
+						</section>
+				    </article>
+
+					<!-- html shiv -->	
+					<article class='fill iframe-full'>
+					  <h3>
+					    html5 shiv
+					  </h3>
+					  <iframe src='http://code.google.com/p/html5shiv/'></iframe>
+					</article>
+
+							<!-- html shiv -->	
+							<article>
+								<h3>suporte para internet explorer antigos</h3>
+								<section>
+									<pre>
+&lt;!DOCTYPE  html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;!--[if  lt  IE  9]&gt;
+		&lt;script  src="http://html5shiv.googlecode.com/svn/trunk/html5.js"  
+		type="text/javascript"&gt;&lt;/script&gt;
+		&lt;![endif]--&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</pre>
+								</section>
+							</article>
+						<!-- cross browser -->
+				      	<article>
+				        <q>ask not what your browser can do for you, but what you can do for your browser.</q>
+				        <div class='author'>
+				          progressive enhancement
+				        </div>
+				      </article>
+
+				      <article class='fill iframe-full'>
+          		        <h3>
+          		          Do websites need to look exactly the same in everybrowser
+          		        </h3>
+          		        <iframe src='http://dowebsitesneedtolookexactlythesameineverybrowser.com/'></iframe>
+          		    </article>
+
+					<!-- html cross -->	
+					<article>
+						<h3>cross-browser : adicionando class apenas para o internet explorer</h3>
+						<section>
+							<pre>
+			&lt;!--[if lt IE 8]&gt; &lt;body class="ie ie7"&gt; &lt;![endif]--&gt;
+			&lt;!--[if IE 8]&gt; &lt;body class="ie ie8"&gt; &lt;![endif]--&gt;
+			&lt;!--[if IE 9]&gt; &lt;body class="ie9"&gt; &lt;![endif]--&gt;
+			&lt;!--[if (gt IE 9)|!(IE)]&gt;&lt;!--&gt;
+			&lt;body class=''&gt;
+			&lt;!--&lt;![endif]--&gt;
+							</pre>
+						</section>
+					</article>
+				
+				<!-- html5 : datalist -->
+				 <article class="code-example">
+			        <h3>
+			          html5 : datalist
+			        </h3>
+			        <section>
+						<table>   
+				          <tr>
+				            <td>
+			        			<pre>
+&lt;label&gt;informe sua cidade&lt;/label&gt;
+&lt;input list="cidades"/&gt;
+&lt;datalist id="cidades"&gt;                   
+  &lt;option value="Frederico Westphalen"/&gt;  
+  &lt;option value="Porto Alegre"/&gt;
+  &lt;option value="Ijui"/&gt;
+  &lt;option value="Recife"/&gt;
+  &lt;option value="Rio de Janeiro"/&gt;                  
+&lt;/datalist&gt;                               
+</pre>
+							</td>
+							<td>
+								<label>informe sua cidade</label>
+								<input list="cidades"/>
+								<datalist id="cidades">
+								  <option value="Frederico Westphalen">
+								  <option value="Porto Alegre">
+								  <option value="Ijui">
+								  <option value="Recife"/>
+								  <option value="Rio de Janeiro"/>
+								</datalist>
+							</td>
+							</tr>
+						</table>
+					</section>
+			      </article>
+
+				<!-- html5 : header -->
+				 <article class="code-example">
+			        <h3>
+			          html5 : header
+			        </h3>
+			        <section>
+						<table>   
+				          <tr>
+				            <td>
+			        			<pre>
+&lt;header&gt;
+&lt;h1&gt;Frederico Westphalen&lt;/h1&gt;
+&lt;p&gt;Rio Grande do Sul&lt;/p&gt;
+&lt;/header&gt;                             
+</pre>
+							</td>
+							<td>
+								<header>
+								<h1>Frederico Westphalen</h1>
+								<p>Rio Grande do Sul</p>
+								</header>
+							</td>
+							</tr>
+						</table>
+					</section>
+			      </article>
+
+				 <!-- html5 : hgroup -->
+				 <article class="code-example">
+			        <h3>
+			          html5 : hgroup
+			        </h3>
+			        <section>
+						<table>   
+				          <tr>
+				            <td>
+			        			<pre>
+&lt;hgroup&gt;
+&lt;h1&gt;Frederico Westphalen&lt;/h1&gt;
+&lt;h2&gt;EATI&lt;/h2&gt;
+&lt;/hgroup&gt;                             
+</pre>
+							</td>
+							<td>
+								<hgroup>
+								<h1>Frederico Westphalen</h1>
+								<h2>EATI 2011</h2>
+								</hgroup>
+							</td>
+							</tr>
+						</table>
+					</section>
+			      </article>
+
+				 <!-- html5 : progress -->
+				 <article class="code-example">
+			        <h3>
+			          html5 : progress
+			        </h3>
+			        <section>
+						<table>   
+				          <tr>
+				            <td>
+			        			<pre>
+&lt;progress&gt;carregando...&lt;/progress&gt;
+</pre>
+								<progress>carregando...</progress><br><br>
+							</td>
+							</tr>
+				          <tr>
+				            <td>
+			        			<pre>
+&lt;progress value="57" max="100"&gt;57% complete&lt;/progress&gt;    
+</pre>
+								<progress value="57" max="100">57% completo</progress>
+							</td>
+							</tr>
+						</table>
+					</section>
+			      </article>
+
+				 <!-- html5 : microdata -->
+				 <article>
+			        <h3>
+			          html5 : microdata
+			        </h3>
+			        <section>
+						<pre>
+&lt;div itemscope itemtype="http://globoesporte.com/Time"&gt;
+ 	&lt;p&gt;time: &lt;span itemprop="name"&gt;Gremio&lt;/span&gt;.&lt;/p&gt;
+ 	&lt;p&gt;país: &lt;span itemprop="country"&gt;Brasil&lt;/span&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div itemscope itemtype="http://globoesporte.com/Time"&gt;
+ 	&lt;p&gt;time: &lt;span itemprop="name"&gt;Internacional&lt;/span&gt;.&lt;/p&gt;
+ 	&lt;p&gt;país: &lt;span itemprop="country"&gt;Brasil&lt;/span&gt;.&lt;/p&gt;
+&lt;/div&gt;
+						</pre>
+					</section>
+			      </article>
+
+				 <!-- html5 : video -->
+				 <article>
+			        <h3>
+			          html5 : video
+			        </h3>
+			        <section>
+						<pre>
+&lt;video width="320" height="240" controls="controls"&gt;
+  &lt;source src="movie.ogg" type="video/ogg" /&gt;
+  &lt;source src="movie.mp4" type="video/mp4" /&gt;
+  &lt;source src="movie.webm" type="video/webm" /&gt;
+Your browser does not support the video tag.
+&lt;/video&gt;
+						</pre>
+						<pre>
+document.getElementById("video").play();</pre>
+					</section>
+			      </article>	
+			
+				 <!-- html5 : audio -->
+				 <article>
+			        <h3>
+			          html5 : audio
+			        </h3>
+			        <section>
+						<pre>
+&lt;audio src="song.ogg" controls="controls"&gt&lt/audio&gt;
+						</pre>
+						<pre>
+document.getElementById("audio").muted = false;
+</pre>
+					</section>
+			      </article>
+																			
+				<!-- html5 : figure -->
+				 <article class="code-example">
+			        <h3>
+			          html5 : figure
+			        </h3>
+			        <section>
+						<table>   
+				          <tr>
+				            <td>
+			        			<pre>
+&lt;figure&gt;
+  &lt;p&gt;html5 em libras?&lt;/p&gt;
+  &lt;img src="sinais.png"
+   width="200"
+   height="282" /&gt;
+&lt;/figure&gt;                           
+</pre>
+							</td>
+							<td>
+								<figure>
+								  <p>html5 em libras?</p>
+								  <img src="sinais.png" width="200" height="282" />
+								</figure>
+							</td>
+							</tr>
+						</table>
+					</section>
+			      </article>
+
+
+				<article>
+				  <h3>
+				    canvas
+				  </h3>
+				  <p>
+					<ul>
+				        <li class="black">Criado para widgets do Dashboard OS X e Safari</li>
+						<li class="black">Desenhos bitmap 2D, 3D</li>
+						<li class="black">HTML5</li>
+						<li class="black">API JAVASCRIPT</li>
+						<li class="black">ESPECIFICAÇÃO W3C</li>
+			      	</ul>
+				  </p>
+				</article>
+			<article>
+			  <h3>
+			    canvas
+			  </h3>
+			  <p>
+				<ul>
+			        <li class="black">Drawing tools (retângulos, arcos, linhas)</li>
+					<li class="black">Efeitos (fill, bordas, gradientes, transparência)</li>
+					<li class="black">Transformações (rotação, translação, matrizes )</li>
+					<li class="black">Carregar dados a partir de um data URI</li>
+		      	</ul>
+			  </p>
+			</article>
+			
+			<article>
+			  <h3>
+			    canvas libraries
+			  </h3>
+			  <p>
+				<ul>
+			        <li class="black">draw2D javascript drawing library</li>
+					<li class="black">cufon</li>
+					<li class="black">flot</li>
+		      	</ul>
+			  </p>
+			</article>
+						<!-- estrutura basica -->
+			<article>
+				<h3>canvas no internet explorer</h3>
+				<section>
+					<pre>
+&lt;!--[if lt IE9]&gt;
+&lt;script src="excanvas.js"&gt;&lt;/script&gt;
+&lt;![endif]--&gt;</pre>
+					<pre>
+var el = document.createElement('canvas');
+G_vmlCanvasManager.initElement(el);
+var ctx = el.getContext('2d');</pre>
+				</section>
+		    </article>
+			
+			  <article class='fill iframe-full'>
+		        <h3>
+		          doodle do google usando canvas
+		        </h3>
+		        <iframe src='http://www.google.com/logos/2011/lespaul.html'></iframe>
+		    </article>
+					 
+			<article>
+			  <h3>
+			    svg
+			  </h3>
+			  <p>
+				<ul>
+			        <li class="black">Sun Microsystems, Adobe, Apple, IBM, e Kodak são uma das que estão envolvidas com o padrão.</li>
+					<li class="black">Independente de resolução (vetor)</li>
+					<li class="black">Controle dos elementos via DOM</li>
+					<li class="black">Imagens representadas em XML</li>
+					<li class="black">Processamento lento a medida que aumenta a complexidade da DOM</li>
+		      	</ul>
+			  </p>
+			</article>
+			
+		      <article class='fill iframe-full'>
+		        <h3>
+		          excanvas
+		        </h3>
+		        <iframe src='http://code.google.com/p/svgweb/'></iframe>
+		    </article>
+		
+			<article>
+			  <h3>
+			    svg
+			  </h3>
+			  <pre>
+&lt;!--[if lt IE9]&gt;
+&lt;meta name="svg.render.forceflash" content="true"&gt;
+&lt;![endif]--&gt;
+
+&lt;script src="svg.js"&gt;&lt;/script&gt;
+			  </pre>
+			</article>
+			
+			<article>
+			  <h3>
+			    svg libraries
+			  </h3>
+			  <p>
+				<ul>
+			        <li class="black">RaphaelJS</li>
+					<li class="black">Processing.js</li>
+		      	</ul>
+			  </p>
+			</article>
+		<!-- html shiv -->	
+		<article class="smaller code-example">
+			<h3>mathML</h3>
+			<section>
+				<table>   
+		          <tr>
+		            <td>
+		              <pre>&lt;math&gt; 
+  &lt;mrow&gt; 
+    &lt;mi&gt;x&lt;/mi&gt; 
+    &lt;mo&gt;=&lt;/mo&gt; 
+    &lt;mfrac&gt; 
+      &lt;mrow&gt; 
+        &lt;mo form="prefix"&gt;&minus;&lt;/mo&gt; 
+        &lt;mi&gt;b&lt;/mi&gt; 
+        &lt;mo&gt;&PlusMinus;&lt;/mo&gt; 
+        &lt;msqrt&gt; 
+          &lt;msup&gt; 
+            &lt;mi&gt;b&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt; 
+          &lt;/msup&gt; 
+          &lt;mo&gt;&minus;&lt;/mo&gt; 
+          &lt;mn&gt;4&lt;/mn&gt;&lt;mo&gt;&InvisibleTimes;&lt;/mo&gt;&lt;mi&gt;a&lt;/mi&gt; 
+          &lt;mo&gt;&InvisibleTimes;&lt;/mo&gt; 
+          &lt;mi&gt;c&lt;/mi&gt; 
+        &lt;/msqrt&gt; 
+      &lt;/mrow&gt; 
+      &lt;mrow&gt; 
+        &lt;mn&gt;2&lt;/mn&gt; 
+        &lt;mo&gt;&InvisibleTimes;&lt;/mo&gt; 
+        &lt;mi&gt;a&lt;/mi&gt; 
+      &lt;/mrow&gt; 
+    &lt;/mfrac&gt; 
+  &lt;/mrow&gt; 
+&lt;/math&gt;</pre>
+		            </td>
+		<td>			<math> 
+					  <mrow> 
+					    <mi>x</mi> 
+					    <mo>=</mo> 
+					    <mfrac> 
+					      <mrow> 
+					        <mo form="prefix">−</mo> 
+					        <mi>b</mi> 
+					        <mo>±</mo> 
+					        <msqrt> 
+					          <msup> 
+					            <mi>b</mi><mn>2</mn> 
+					          </msup> 
+					          <mo>−</mo> 
+					          <mn>4</mn><mo>⁢</mo><mi>a</mi> 
+					          <mo>⁢</mo> 
+					          <mi>c</mi> 
+					        </msqrt> 
+					      </mrow> 
+					      <mrow> 
+					        <mn>2</mn> 
+					        <mo>⁢</mo> 
+					        <mi>a</mi> 
+					      </mrow> 
+					    </mfrac> 
+					  </mrow> 
+					</math></td>
+		          </tr>
+		        </table>
+			</section>
+		</article>
+		
+		<!-- css3 : nth-child -->
+		 <article class="code-example">
+	        <h3>
+	          css3 : nth-child / first-child
+	        </h3>
+	        <section>
+				<table>   
+		          <tr>
+		            <td>
+	        			<pre>.code-example .zebra:nth-child(2n+1) {
+	background: #E3E3E3;}
+</pre>
+	        			<pre>.code-example .zebra:nth-child(odd) {
+	background: #E3E3E3;
+}</pre>
+	        			<pre>.code-example .zebra:nth-child(even) {
+	background: #fff;
+}</pre>
+<pre>.code-example .zebra:first-child{
+    border:2px solid #f00;
+}</pre>
+					</td>
+					<td>
+						<div class="zebra">1</div>
+						<div class="zebra">2</div>
+						<div class="zebra">3</div>
+						<div class="zebra">4</div>
+						<div class="zebra">5</div>
+						<div class="zebra">6</div>
+						<div class="zebra">7</div>
+						<div class="zebra">8</div>
+						<div class="zebra">9</div>
+					</td>
+					</tr>
+				</table>
+			</section>
+	      </article>
+
+		<!-- css3 : nth-child -->
+		 <article class="code-example">
+	        <h3>
+	          css3 : box-shadow
+	        </h3>
+	        <section>
+				<table>   
+		          <tr>
+		            <td>
+	        			<pre>.code-example .box-shadow{
+	box-shadow: 0px 0px 10px #ccc;
+}
+</pre>
+					</td>
+					<td>
+						<div class="square box-shadow"></div>
+					</td>
+					</tr>
+				</table>
+			</section>
+	      </article>
+	
+		<!-- css3 : border-radius -->
+		 <article class="code-example">
+	        <h3>
+	          css3 : border-radius
+	        </h3>
+	        <section>
+				<table>   
+		          <tr>
+		            <td>
+	        			<pre>.code-example .border-radius{
+	border-radius: 25px;
+}
+</pre>
+					</td>
+					<td>
+						<div class="square border-radius"></div>
+					</td>
+					</tr>
+				</table>
+			</section>
+	      </article>
+	      <article class='fill iframe-full'>
+	        <h3>
+	          css pie
+	        </h3>
+	        <iframe src='http://css3pie.com/'></iframe>
+	      </article>
+				<!-- css3 : Opacity -->
+				 <article class="code-example">
+			        <h3>
+			          css3 : Opacity
+			        </h3>
+			        <section>
+						<table>   
+				          <tr>
+				            <td>
+			        			<pre>.code-example .box-opacity{
+	color: rgba(255, 0, 0, 0.75);
+}
+		</pre>
+							</td>
+							<td>
+								<div class="square box-opacity"></div>
+							</td>
+							</tr>
+						</table>
+					</section>
+			      </article>
+				
+		<!-- css3 : font-face -->
+		 <article class="code-example">
+	        <h3>
+	          css3 : font-face
+	        </h3>
+	        <section>
+				<table>   
+		          <tr>
+		            <td>
+	        			<pre>@font-face {
+    font-family: 'tahoma';
+    src: url('font/tahoma.eot?#iefix') format('embedded-opentype'),
+    url('font/tahoma.woff') format('woff'),
+    url('font/tahoma.ttf') format('truetype');
+}
+.font-face-teste {
+    font-family: "tahoma";
+}
+</pre>
+					</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="font-face-teste">Frederico Westphalen</div>
+						</td>
+					</tr>
+				</table>
+			</section>
+	      </article>
+	
+	      <article class='fill iframe-full'>
+	        <h3>
+	          Ultimate CSS Gradient Generator
+	        </h3>
+	        <iframe src='http://www.colorzilla.com/gradient-editor/'></iframe>
+	      </article>
+	
+			<!-- css3 : border-radius -->
+				 <article class="code-example">
+			        <h3>
+			          html5 : forms
+			        </h3>
+			        <section>
+						<table>   
+				          <tr>
+				            <td>
+			        			<pre>
+&lt;input type="color" value="#b97a57"&gt;
+&lt;input type="date" value="2011-06-08"&gt;
+&lt;input type="datetime" value="2011-06-09T20:35:34.32"&gt;
+&lt;input type="datetime-local" value="2011-06-09T22:41"&gt;
+&lt;input type="email" value="email@fellipe.com"&gt;
+&lt;input type="month" value="2012-06"&gt;
+&lt;input type="number" value="3"&gt;
+&lt;input type="range" value="15"&gt;
+
+&lt;input type="search" value="[Any search text]"&gt;
+
+&lt;input type="tel" value="[Any numeric value]"&gt;
+
+&lt;input type="time" value="22:38"&gt;
+&lt;input type="url" value="http://robertnyman.com"&gt;
+
+&lt;input type="week" value="2011-W24"&gt;
+		</pre>
+							</td>
+							<td>
+								<input type="color" value="#b97a57">
+								<input type="date" value="2011-06-08">
+								<input type="datetime" value="2011-06-09T20:35:34.32">
+								<input type="datetime-local" value="2011-06-09T22:41">
+								<input type="email" value="email@fellipe.com">
+								<input type="month" value="2012-06">
+								<input type="number" value="3">
+								<input type="range" value="15">
+
+								<!-- Note: If not set, default attribute values are min="0", max="100", step="1".
+								<input type="search" value="[Any search text]">
+
+								<!-- Note: In WebKit-based web browsers (Google Chrome, Safari) you can add the non-standard results attribute to get a looking glass icon to click to see the latest searches, and the attribute autosave to keep them across page loads. -->
+								<input type="tel" value="[Any numeric value]">
+
+								<!-- Note: Most web browsers seem to let through any value at this time. -->
+								<input type="time" value="22:38">
+								<input type="url" value="http://robertnyman.com">
+
+								<!-- Note: requires a protocol like http://, ftp:// etc in the beginning. -->
+								<input type="week" value="2011-W24">
+							</td>
+							</tr>
+						</table>
+					</section>
+			      </article>
+	 
+		 <article>
+	        <h3>
+	          html5 > Device Orientation
+	        </h3>
+	        <section>
+	        <pre>window.addEventListener('deviceorientation', function(event) {
+				var a = event.alpha;
+				var b = event.beta;
+				var g = event.gamma;
+}, false);</pre>
+			<div  id="device-orientation">
+				<img src="logo.png" />
+			</div>
+			</section>
+	      </article>	
+  
+<article>
+	<h3>links </h3>
+	<p>
+		<ul>
+			<li class="black">http://berjon.com/blog/2010/09/bouncy.xhtml</li>
+			<li class="black">http://raphaeljs.com/australia.html</li>
+			<li class="black">http://raphaeljs.com/analytics.html</li>
+			<li class="black">http://raphaeljs.com/image-rotation.html</li>
+			<li class="black">http://dev.w3.org/html5/spec/Overview.html</li>
+			<li class="black">http://dev.w3.org/html5/canvas-api/canvas-2d-api.html</li>
+		</ul>
+	</p>
+</article>
+
+	<article class='fill iframe-full'>
+	  <h3>
+	    prefixr
+	  </h3>
+	  <iframe src='http://prefixr.com/index.php'></iframe>
+	</article>
+      <article class='fill iframe-full'>
+        <h3>
+          modernizr
+        </h3>
+        <iframe src='http://www.modernizr.com/'></iframe>
+      </article>
+      <article class='fill iframe-full'>
+        <h3>
+          html5 boilerplate
+        </h3>
+        <iframe src='http://html5boilerplate.com/'></iframe>
+      </article>
+      <article class='fill iframe-full'>
+        <h3>
+          camanjs
+        </h3>
+        <iframe src='http://camanjs.com/examples/presets'></iframe>
+      </article>
+      <article class='fill iframe-full'>
+        <h3>
+          popcornjs
+        </h3>
+        <iframe src='http://popcornjs.org/'></iframe>
+      </article>
+      <article class='fill iframe-full'>
+        <h3>
+          excanvas
+        </h3>
+        <iframe src='http://excanvas.sourceforge.net/'></iframe>
+      </article>
+      <article>
+        <h1>
+          Obrigado
+        </h1>
+        <p>
+          Davidson Fellipe | @davidsonfellipe
+          <br>
+          Aug 26, 2011 / www.fellipe.com
+        </p>
+      </article>
+
+		<script type="text/javascript" charset="utf-8">
+			var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+			if(is_chrome){
+				window.addEventListener('deviceorientation', handleOrientation);
+			}
+			function handleOrientation(evento){
+				var rotate = '';
+		        var scale = '';
+				var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+
+				// For FF3.6+
+				if (!evento.gamma && !evento.beta) {
+
+				  evento.gamma = -(evento.x * (180 / Math.PI));
+				  evento.beta = -(evento.y * (180 / Math.PI));
+				  rotate = 'rotate(' + evento.gamma*-1 + 'deg)';
+			      scale = 'scale(' + ((evento.beta/180)*2 + 0.75) + ')';
+
+				}else{
+					rotate = 'rotate(' + event.gamma*-1 + 'deg)';
+					scale = 'scale(' + ((event.beta/180)*2 + 1) + ')';
+				}
+
+				if(is_chrome){
+					document.getElementById('device-orientation').style.webkitTransform = rotate + ' ' + scale;
+				}
+			}
+		</script>
+		
+			<script type="text/javascript">
+				/*
+			    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+			    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+			    try{
+			    	var pageTracker = _gat._getTracker("UA-2123552-1");
+			    	pageTracker._trackPageview();
+			    }catch(err){}
+				*/
+		    
+		    	var _gaq = _gaq || [];
+			    _gaq.push(['_setAccount', 'UA-2123552-1']);
+			    _gaq.push(['_trackPageview']);
+			
+			    (function() {
+				
+			      var ga = document.createElement('script');
+			      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			
+			      ga.setAttribute('async', 'true');
+			      document.documentElement.firstChild.appendChild(ga);
+			
+			    })();
+			</script>
+  </body>
+</html>
