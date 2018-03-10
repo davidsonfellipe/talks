@@ -14,4 +14,4 @@
 - Canvas vs. SVG (http://goo.gl/tKjv6z)
 - Canvas Element (http://goo.gl/0yGTg4)
 
-More details about my talks: http://fellipe.com/talks
+More details about my talks: https://fellipe.com/talks
